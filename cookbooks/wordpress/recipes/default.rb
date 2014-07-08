@@ -11,7 +11,7 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
     template "/data/#{app_name}/shared/config/wp-config.php" do
       owner user[:username]
       group user[:username]
-      mode 0644
+      mode 0666
       source "wp-config.php.erb"
       variables({
         :app_name => app_name,
