@@ -1,33 +1,34 @@
-# Wordpress on Engine Yard AppCloud
+# Wordpress on Engine Yard Cloud
 
-Have you wanted to get Wordpress installed on Engine Yard AppCloud?  Well we have something in common then!
+Have you wanted to get Wordpress installed on Engine Yard Cloud?  Well we have something in common then!
 
 ## Installation Procedure
 
 ### Step 1. Fork this Repository
 
-Of course you'll need a github account, but then if you're here you probably have one.
+Click on Fork in the top right of this page, and chose your destination account or organzation to add the repository.
 
-You need to fork your own Git Repository URI so that you can add a Deploy Key in a few steps.
+This is important so you'll gain read/write access to the repository, to make your own changes, and be able to add a deploy key in the administration section in Step 3.
 
-### Step 2. Add the Application to Your EY AppCloud Account
+### Step 2. Add an Application 
 
-  1. Click on **Applications** under Server Tools on the left.
-  2. Then look for the **Add a New Application** button in the top right.  Click on that.
-  3. Give the Application Name of "**wordpress**".
+Now that you've got the repository forked we'll switch over to the Engine Yard dashboard and add an Application so that we'll be able to create an Environment later.
+
+  1. From the homepage, click on the **Add an Application** button at the top of your Environments list.
+  2. Choose the **Application Language** of PHP.
   4. Copy and paste your **Git Repository URI**, you just forked in Step 1.
-  5. Change the Application Type to **Rack**.
-  6. The **latest version** of Rack is fine, it's ultimately irrelevant.
-  7. Click the **Create application** button to save your app.
+  3. Give the Application Name of "**wordpress**".
+  6. Leave the **Web Root** as "public/"
+  6. Click on **Create Application** to save the settings of this new Application.
 
 ### Step 3. Add Your Git Deploy Key to Your Repository's Deploy Key
 
   1. On your repository's page click on the **Admin** button.
   2. Then click on **Deploy Keys** under the left hand side.
   3. Click on **Add another deploy key**.
-  4. Give it a Title like "**EY AppCloud**".
+  4. Give it a Title like "**EY Cloud**".
   5. Then paste in the **Key**, and click on the **Add key** button.
-  6. Then switch back to EY AppCloud and click on the **My Deploy Key is in Place** button.
+  6. Then switch back to EY Cloud and click on the **My Deploy Key is in Place** button.
   7. There are no extra Gems to setup, click the **Next Step** button to proceed to Step 4.
 
 ### Step 4. Configure Unix Packages
@@ -75,12 +76,12 @@ You also need to have your repository checked out to your local machine, so we c
 
 `ey recipes upload`
 
-  * This command will prompt you for your username and password (unless you've used this before).  Enter the same user/pass you use to login to Engine Yard AppCloud.
+  * This command will prompt you for your username and password (unless you've used this before).  Enter the same user/pass you use to login to Engine Yard Cloud.
   * Then we'll run the custom chef recipes from the CLI to finish it off.
 
 `ey recipes apply`
 
-  * Now log back into EY AppCloud and to deploy your app in Step 8.
+  * Now log back into EY Cloud and to deploy your app in Step 8.
 
 ### Step 8. Deploy Your Application & Run Chef
 
@@ -97,6 +98,6 @@ You also need to have your repository checked out to your local machine, so we c
     README.markdown  |  You're reading it sonny-jim.
     Rakefile         |  Tasks to create a cookbook or test for syntax errors.
     cookbooks/       |  The custom chef recipes folder.
-    deploy/          |  This folder allows for EY AppCloud deploy hooks.
+    deploy/          |  This folder allows for EY Cloud deploy hooks.
 
 Read the code in the files for more information.  The rest of the files are needed to run Wordpress.
