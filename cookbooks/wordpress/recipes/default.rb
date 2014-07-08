@@ -19,14 +19,5 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
       })
     end
 
-    template "/etc/nginx/servers/#{app_name}-chef.conf" do
-      owner user[:username]
-      group user[:username]
-      mode 0644
-      source "wordpress.conf.erb"
-      variables({
-        :app_name => app_name
-      })
-    end
   end
 end
