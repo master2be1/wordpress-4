@@ -1,0 +1,6 @@
+defaults:
+  bundler: false    # By default, bundler is detected via Gemfile. Options: true: always run bundler; false: never run bundler
+  composer: false   # By default, composer is detected via composer.lock. Options: true: always run composer; false: never run composer
+  npm: false        # By default, npm is detected via package.json. Options: true: always run npm; false: never run npm
+  copy_exclude:     # don't rsync the following dirs (some people like to skip .git)
+    .git

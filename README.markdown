@@ -99,7 +99,7 @@ You also need to have your repository checked out to your local machine, so we c
 
 `ey recipes apply`
 
-  * Now log back into EY Cloud and to deploy your app in Step 8.
+  * Now log back into EY Cloud and to deploy your app in Step 7.
 
 ### Step 7. Deploy Your Application & Run Chef
 
