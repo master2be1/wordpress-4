@@ -2,6 +2,16 @@
 
 Have you wanted to get Wordpress installed on Engine Yard Cloud?  Well we have something in common then!
 
+## Explanation of Non-Wordpress Files
+
+    README.markdown  |  You're reading it sonny-jim.
+    Rakefile         |  Tasks to create a cookbook or test for syntax errors.
+    cookbooks/       |  The custom chef recipes folder.
+    deploy/          |  This folder allows for EY Cloud deploy hooks.
+    public/          |  Contains the main wordpress software, and is the Web Root.
+
+Read the code in the files for more information.  The rest of the files are needed to run Wordpress.
+
 ## Installation Procedure
 
 ### Step 1. Fork this Repository
@@ -101,12 +111,4 @@ You also need to have your repository checked out to your local machine, so we c
   1. Now you're ready to click on the **HTTP** link in your environment.
   2. You can start to setup your Wordpress blog.  Enjoy!
 
-## Explanation of Non-Wordpress Files
 
-    README.markdown  |  You're reading it sonny-jim.
-    Rakefile         |  Tasks to create a cookbook or test for syntax errors.
-    cookbooks/       |  The custom chef recipes folder.
-    deploy/          |  This folder allows for EY Cloud deploy hooks.
-    public/          |  Contains the main wordpress software, and is the Web Root.
-
-Read the code in the files for more information.  The rest of the files are needed to run Wordpress.
